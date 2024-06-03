@@ -1,0 +1,27 @@
+{
+    "auth": {
+      "username": "harishkumar",
+      "access_key": "51oiBcwlC3DV3nZ5KdRx"
+    },
+    "browsers": [{
+        "browser": "chrome",
+        "os": "Windows 10",
+        "versions": ["latest"]
+      }
+    ],
+    "run_settings": {
+      "cypress_config_file": "./cypress.config.js",
+      "cypress_version": "12.3",
+      "project_name": "Cypress Ankur Tests",
+      "build_name": "Build no. 1",
+      "parallels": "5",
+      "npm_dependencies":{
+        "cypress": "^13.8.1",
+        "cypress-xpath": "^2.0.1"
+      }
+    },
+    "dependencies": {
+        "cypress": "^13.8.1",
+        "cypress-xpath": "^2.0.1"
+      }
+  }
