@@ -80,22 +80,5 @@ describe('Builder Regression Test',function(){
         componentsListPageObject.openTheComponent(peUniqueCode)
         var componentDetailsPageObject = new componentDetailsPage();       
         componentDetailsPageObject.ingestPromoteComponent()
-    })
-
-    xit('Practice code', function(){  
-        
-         cy.visit("https://rahulshettyacademy.com/AutomationPractice/")
-         cy.get('#alertbtn').click() //Alerts are handled/closed automatically by Cypress. We just need to launch/invoke them
-         
-         //Have to trigger following browser event using jquery to validate alert text
-         cy.on('window:alert',(str)=>{
-          expect(str).to.eql('Hello , share this practice page and share your knowledge')          
-         })         
-
-         //Following code is to switch to another tab
-         cy.get('#opentab').invoke('removeAttr','target').click(); //Cypress can not switch to another tab so, we have to launch the tab page in the current page itself using jquery method
-         cy.origin('https://www.qaclickacademy.com/',()=>{ //But if the page origin has changed, we have to tell this to Cypress
-            cy.get('.nav-item').contains('About us').click();
-         })         
-    })
+    })    
 })
