@@ -16,7 +16,7 @@ describe('Builder Regression Test',function(){
     //var peUniqueCode = "cqa_pe_a1cayh"
     // var scorableActivity = "r22_scorableA_V8.zip"
     // var nonScorableActivity = "EV_OP_INT_cqa_non_socorable.zip"
-    var environment = "rel"    
+    var environment = "thor"    
     
     beforeEach('Adding code required to be executed before each test',()=>{        
         cy.fixture(environment).then(function(data){

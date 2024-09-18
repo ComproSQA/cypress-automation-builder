@@ -9,7 +9,8 @@ class componentsListPage{
      cyYearDropdown = '#select2-chosen-1'
      cyYear = '//*[contains(@class,"select2-result-label")][contains(text(),"2018")]'
      programDropdown = '#select2-chosen-2'
-     program = '//*[contains(@class,"select2-result-label")][contains(text(),"Default")]'
+     //program = '//*[contains(@class,"select2-result-label")][contains(text(),"Default")]'
+     program = '//*[contains(@class,"select2-result-label")][text()="Default"]'
      titleField = '#builder-form-field-title'
      saveAndReturnButton = '.form-actions > :nth-child(2) > .btn'
 
