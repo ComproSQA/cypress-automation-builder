@@ -1,7 +1,7 @@
 {
   "url": "https://qa-builder.cambridgeone.org/",
-  "username": "anil_admin",
-  "password": "Compro11",
+  "username": "",
+  "password": "",
   "scorableActivity": "r22_scorableA_V14.zip",
   "nonScorableActivity": "EV_OP_INT_cqa_non_socorable.zip"
 }
