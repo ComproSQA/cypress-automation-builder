@@ -5,7 +5,7 @@ import umbrellaListPage from "./pages/umbrellaListPage";
 import umbrellaDetailsPage from "./pages/umbrellaDetailsPage";
 import componentsListPage from "./pages/componentsListPage";
 import componentDetailsPage from "./pages/componentDetailsPage";
-import c1PreviewPage from "./pages/c1PreviewPage";
+import c1Page from "./pages/c1Page";
 
 describe('Builder Regression Test',function(){
 
@@ -80,5 +80,15 @@ describe('Builder Regression Test',function(){
         componentsListPageObject.openTheComponent(peUniqueCode)
         var componentDetailsPageObject = new componentDetailsPage();       
         componentDetailsPageObject.ingestPromoteComponent()
+    })
+    
+    it('Preview the product in C1', function(){  
+        var c1PagePbject = new c1Page();
+        cy.fixture(environment).then(function(data){
+            cy.visit(data.c1Url)
+        })
+        c1PagePbject.loginIntoC1(usernameC1,passwordC1)
+        c1PagePbject.goToLibrary()
+        c1PagePbject.searchAndLaunchProduct(umbrellaUniqueCode)    
     })    
 })

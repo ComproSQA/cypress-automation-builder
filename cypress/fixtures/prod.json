@@ -3,5 +3,6 @@
   "username": "",
   "password": "",
   "scorableActivity": "r22_scorableA_V14.zip",
-  "nonScorableActivity": "EV_OP_INT_cqa_non_socorable.zip"
+  "nonScorableActivity": "EV_OP_INT_cqa_non_socorable.zip",
+  "c1Url": "https://cambridgeone.org/"
 }
