@@ -12,6 +12,7 @@ class c1Page{
      viewDetailsLink = '[qid="t-lib-cm-link-6"]'
      component = '.umbrella-components .link[tabindex="0"]'
      psActivity = '#activityLaunch .content-cup-pskill'
+     endedClassesDropdown = '#Ended-Classes-Section'
 
     //Functions/Actions
 
@@ -37,6 +38,15 @@ class c1Page{
         cy.get(this.viewDetailsLink).click()
         cy.get(this.component).click()
         cy.get(this.psActivity).should('be.visible')
-    }            
+    }   
+    
+    waitForEndedClassesDropdown(){
+        cy.get(this.endedClassesDropdown).should('be.visible')
+    }
+
+    launchComponentOnProductDetailsPage(){
+        cy.get(this.component).should('be.visible').click();
+        cy.get(this.psActivity).should('be.visible')
+    }
 }
 export default c1Page;
