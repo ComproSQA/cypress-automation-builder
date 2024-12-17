@@ -21,8 +21,8 @@ describe('Builder Regression Test',function(){
     var environment = "qa"    
     
     beforeEach('Adding code required to be executed before each test',()=>{        
-        /*
-        cy.fixture(environment).then(function(data){
+        
+        /*cy.fixture(environment).then(function(data){
             //this.data=data
             //run on Thor
             cy.visit(data.url, {
@@ -36,10 +36,9 @@ describe('Builder Regression Test',function(){
             var loginPageObject = new loginPage()
             //loginPageObject.loginIntoBuilder(environment,this.data.org,this.data.username,this.data.password); 
             loginPageObject.loginIntoBuilder(environment,data.org,data.username,data.password);         
-        })
-            */
-    })
-        
+        })*/
+            
+    })        
 
     it('Create an umbrella product with unique code starting from "cqa"', function(){
         

@@ -72,7 +72,8 @@ class componentDetailsPage{
             cy.get(this.searchLibraryInSelectActivityPopup).type(`${activityName}{enter}`); //Search for the non scorable activity            
             const selector = getSelector(activityName)
             function getSelector(NAME){
-                return `//*[contains(text(),"${NAME}")][contains(@ng-class,"assetName")]//..//..//..//*[contains(@class,"icon")]`
+                //return `//*[contains(text(),"${NAME}")][contains(@ng-class,"assetName")]//..//..//..//*[contains(@class,"icon")]`
+                return `//*[contains(text(),"${NAME}")][contains(@ng-class,"assetName")][1]//..//..//..//*[contains(@class,"icon")]`
             }
             cy.xpath(selector).scrollIntoView().click(); //Select activity
             cy.get(this.addActivityButtonInSelectActivityPopup).click();
