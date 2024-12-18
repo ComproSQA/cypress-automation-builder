@@ -3,5 +3,9 @@
   "username": "",
   "password": "",
   "scorableActivity": "r22_scorableA_V14.zip",
-  "nonScorableActivity": "EV_OP_INT_cqa_non_socorable.zip"
+  "nonScorableActivity": "EV_OP_INT_cqa_non_socorable.zip",
+  "c1Url": "https://cambridgeone.org/",
+  "c1Org": "org_mqa-sierra-prod1",
+  "usernameC1": "cqateacher_1@mailsac.com",
+  "passwordC1": "Compro11"
 }
