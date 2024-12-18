@@ -11,8 +11,10 @@ class c1Page{
      showMoreLink = '//*[@qid="t-lib-cm-btn-3"]//*[text()="Show more"]'
      viewDetailsLink = '[qid="t-lib-cm-link-6"]'
      component = '.umbrella-components .link[tabindex="0"]'
+     component1 = '[qid="pView-3-0"]'
      psActivity = '#activityLaunch .content-cup-pskill'
      endedClassesDropdown = '#Ended-Classes-Section'
+     endedClassesDropdown1 = '[qid="tDashboard-47"]'
 
     //Functions/Actions
 
@@ -40,13 +42,24 @@ class c1Page{
         cy.get(this.psActivity).should('be.visible')
     }   
     
-    waitForEndedClassesDropdown(){
-        cy.get(this.endedClassesDropdown).should('be.visible')
+    waitForEndedClassesDropdown(env){
+        if(env=='rel' || env=='prod'){
+            cy.get(this.endedClassesDropdown1).should('be.visible')            
+        }
+        else{
+            cy.get(this.endedClassesDropdown).should('be.visible')            
+        }        
     }
 
-    launchComponentOnProductDetailsPage(){
-        cy.get(this.component).should('be.visible').click();
-        cy.get(this.psActivity).should('be.visible')
+    launchComponentOnProductDetailsPage(env){
+        if(env=='rel' || env=='prod'){            
+            cy.get(this.component1).should('be.visible').click();
+            cy.get(this.psActivity).should('be.visible')
+        }
+        else{
+            cy.get(this.component).should('be.visible').click();
+            cy.get(this.psActivity).should('be.visible')            
+        }        
     }
 }
 export default c1Page;

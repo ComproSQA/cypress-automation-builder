@@ -4,5 +4,8 @@
   "password": "Compro11",
   "scorableActivity": "r22_scorableA_V14.zip",
   "nonScorableActivity": "EV_OP_INT_cqa_non_socorable.zip",
-  "c1Url": "https://release.cambridgeone.org/"
+  "c1Url": "https://release.cambridgeone.org/",
+  "c1Org": "org_mqa-sierra-rel",
+  "usernameC1": "cqateacher_1@mailsac.com",
+  "passwordC1": "Compro11"
 }
