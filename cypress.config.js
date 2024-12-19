@@ -9,6 +9,15 @@ module.exports = defineConfig({
     watchForFileChanges: false,    
     setupNodeEvents(on, config) {
       // implement node event listeners here
+      // Integrate the Mochawesome reporter plugin
+      require('cypress-mochawesome-reporter/plugin')(on);
+    },
+    reporter: 'cypress-mochawesome-reporter',
+    reporterOptions: {
+      reportDir: 'cypress/reports',
+      overwrite: true,
+      html: true,
+      json: true,
     },
     viewportWidth: 1536,
     viewportHeight: 695,
